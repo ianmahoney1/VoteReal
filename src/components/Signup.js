@@ -6,7 +6,8 @@ import { useState } from "react";
 import { Permissions } from 'expo';
 import registerNNPushToken from 'native-notify';
 
-function SignupScreen({ navigation }) {
+function SignupScreen({ navigation, user }) {
+  console.log(user);
   registerNNPushToken(6506, 'qUhButoBbZV2fnpqcWzVXaqM')
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");

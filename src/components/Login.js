@@ -18,7 +18,6 @@ const UserService = {
 };
 
 function LoginScreen({ navigation }) {
-
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
     return (
