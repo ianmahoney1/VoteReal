@@ -20,6 +20,8 @@ function LoginScreen({ navigation }) {
                 style={styles.input}    
                 onChangeText={newText => setUser(newText)}
                 defaultValue={user}
+                autoCapitalize={"none"}
+                autoCorrect={false}
             />
             <Text></Text>
             <Text></Text>
@@ -28,6 +30,9 @@ function LoginScreen({ navigation }) {
                 style={styles.input}    
                 onChangeText={newText => setPass(newText)}
                 defaultValue={pass}
+                autoCorrect={false}
+                secureTextEntry={true}
+                autoCapitalize={"none"}
             />
             <Text></Text>
             <Text></Text>
@@ -54,7 +59,7 @@ function LoginScreen({ navigation }) {
 const styles = StyleSheet.create({
     input: {
       borderColor: "gray",
-      width: "100%",
+      width: "90%",
       borderWidth: 1,
       borderRadius: 10,
       padding: 10,
@@ -62,6 +67,7 @@ const styles = StyleSheet.create({
     button: {
         marginBottom: 30,
         width: 260,
+        borderRadius: 10,
         alignItems: 'center',
         backgroundColor: '#2196F3',
       },
