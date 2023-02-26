@@ -2,6 +2,7 @@
     {
         "first_name": "Masia",
         "last_name": "Wisdom",
+        "username": "masia",
         "password": "12345",
         "council_members": ["Sara Nelson", "Teresa Mosqueda", "Tammy J. Morales"],
         "votes": [
@@ -19,6 +20,7 @@
     {
         "first_name": "Vrishab",
         "last_name": "Kumar",
+        "username": "vsk",
         "password": "12345",
         "council_members": ["Sara Nelson", "Teresa Mosqueda", "Kshama Sawant"],
         "votes": [
@@ -40,6 +42,7 @@
     {
         "first_name": "Aditi",
         "last_name": "Joshi",
+        "username": "aditi",
         "password": "12345",
         "council_members": ["Kshama Sawant", "Teresa Mosqueda", "Lisa Herbold"],
         "votes": [
