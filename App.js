@@ -11,9 +11,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './src/components/Home';
 import SignupScreen from './src/components/Signup';
+import ClicksignupScreen from './src/components/CsignUp';
+import ProfileScreen from './src/components/Profile';
 import LoginScreen from './src/components/Login';
-import ProfileScreen from './src/components/Profile'
-
 
 const Stack = createNativeStackNavigator();
 
@@ -30,7 +30,7 @@ export default class App extends Component {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
+          <Stack.Screen name="CsignUp" component={ClicksignupScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
