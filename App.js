@@ -33,7 +33,7 @@ export default class App extends Component {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen options={{ title: 'Are You Represented?' }}  name="Profile" component={ProfileScreen} />
           <Stack.Screen options={{ title: 'Your Representatives' }} name="CsignUp" component={ClicksignupScreen} />
-          <Stack.Screen options={{ title: 'Bill Summary' }} name="BillSummaryStory" component={BillSummaryStory} /> 
+          <Stack.Screen options={{ title: 'Today\'s Bill' }} name="BillSummaryStory" component={BillSummaryStory} /> 
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -12,6 +12,7 @@ function BillSummaryStory({ navigation }) {
     const [hasViewedSummary, sethasViewedSummary] = React.useState(0);
     const [userVote, setUserVote] = React.useState(0);
 
+    // Bill Data
     const data = [
         {
             user_id: 1,
@@ -52,9 +53,7 @@ function BillSummaryStory({ navigation }) {
                 duration={10}
                 onStart={item => console.log(item)}
                 onClose={item => console.log('close: ', item)}
-                customSwipeUpComponent={<View>
-                                    <Text>Swipe</Text>
-                                </View>}
+                customSwipeUpComponent={<View><Text>Swipe</Text></View>}
                 style={{height: 100}}/>
         </TouchableHighlight>
         
@@ -65,8 +64,10 @@ function BillSummaryStory({ navigation }) {
                 }} underlayColor="white">
 
                 <TouchableHighlight onPress={() => {
-                    setUserVote(0)
-                    navigation.navigate("Signup")
+                    if (hasViewedSummary != "True"){
+                        setUserVote(0)
+                        navigation.navigate("Signup") // SWITCH TO REPORT
+                    }
                 }} underlayColor="white">
                     <View style={styles.no_button}>
                     <Text style={styles.buttonText}>Deny</Text>
@@ -77,11 +78,15 @@ function BillSummaryStory({ navigation }) {
         <TouchableHighlight onPress={() => {
             if(hasViewedSummary != "True"){
                 alert("Please View Bill Summary Before Voting!")
-            }
+            } 
                 }} underlayColor="white">
                 <TouchableHighlight onPress={() => {
-                    setUserVote(1)
-                    navigation.navigate("Signup")
+                    
+                    if (hasViewedSummary != "True"){
+                        setUserVote(1)
+                        navigation.navigate("Signup") // SWITCH TO REPORT
+                    }
+                    
                     }} underlayColor="white">
                     <View style={styles.yes_button}>
                         <Text style={styles.buttonText}>Approve</Text>
