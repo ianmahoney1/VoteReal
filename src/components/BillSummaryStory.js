@@ -1,15 +1,13 @@
 import * as React from 'react';
 import {useState} from 'react';
 import { Button, View, Text, StyleSheet, TextInput, Image, TouchableHighlight, Alert} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import InstaStory from 'react-native-insta-story';
 
 
 function BillSummaryStory({ navigation }) {
 
       // States
-    const [hasViewedSummary, sethasViewedSummary] = React.useState(0);
+    const [hasViewedSummary, setHasViewedSummary] = React.useState(0);
     const [userVote, setUserVote] = React.useState(0);
 
     // Bill Data
@@ -48,7 +46,7 @@ function BillSummaryStory({ navigation }) {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', height: 5}}>
 
         <TouchableHighlight activeOpacity={0.6}
-            onPress={() => sethasViewedSummary("True")} underlayColor="white">
+            onPress={() => setHasViewedSummary("True")} underlayColor="white">
             <InstaStory data={data}
                 duration={10}
                 onStart={item => console.log(item)}
@@ -58,15 +56,16 @@ function BillSummaryStory({ navigation }) {
         </TouchableHighlight>
         
         <TouchableHighlight onPress={() => {
-            if(hasViewedSummary != "True"){
+            if(hasViewedSummary == "True"){
                 alert("Please View Bill Summary Before Voting!")
             }
                 }} underlayColor="white">
 
                 <TouchableHighlight onPress={() => {
-                    if (hasViewedSummary != "True"){
-                        setUserVote(0)
-                        navigation.navigate("Signup") // SWITCH TO REPORT
+                    if (hasViewedSummary == "True"){
+                        setUserVote(0);
+                        setHasViewedSummary(0)
+                        navigation.navigate("Report", {vote: "Reject"}) // SWITCH TO REPORT
                     }
                 }} underlayColor="white">
                     <View style={styles.no_button}>
@@ -76,15 +75,16 @@ function BillSummaryStory({ navigation }) {
         </TouchableHighlight>
 
         <TouchableHighlight onPress={() => {
-            if(hasViewedSummary != "True"){
+            if(hasViewedSummary == "True"){
                 alert("Please View Bill Summary Before Voting!")
             } 
                 }} underlayColor="white">
                 <TouchableHighlight onPress={() => {
                     
-                    if (hasViewedSummary != "True"){
-                        setUserVote(1)
-                        navigation.navigate("Signup") // SWITCH TO REPORT
+                    if (hasViewedSummary == "True"){
+                        setUserVote(1);
+                        setHasViewedSummary(0)
+                        navigation.navigate("Report", { vote: "Approve" }) // SWITCH TO REPORT
                     }
                     
                     }} underlayColor="white">

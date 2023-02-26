@@ -23,10 +23,6 @@
         "council_members": ["Kshama Sawant", "Sara Nelson", "Teresa Mosqueda"],
         "votes": [
             {
-                "name": "CB 120231",
-                "vote": "Approve" 
-            }, 
-            {
                 "name": "CB 120374",
                 "vote": "Approve" 
             }, 

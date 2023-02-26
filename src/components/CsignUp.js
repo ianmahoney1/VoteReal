@@ -24,7 +24,28 @@ const { width } = Dimensions.get('window');
 const SPACING = 10;
 const THUMB_SIZE = 80;
 
-function ClicksignupScreen({ navigation }) {
+function ClicksignupScreen({ route, navigation }) {
+  const user = {
+    "name": "Aditi Joshi",
+    "username": "aditi",
+    "password": "12345",
+    "council_members": ["Kshama Sawant", "Lisa Herbold", "Teresa Mosqueda"],
+    "votes": [
+        {
+            "name": "CB 120231",
+            "vote": "Reject" 
+        }, 
+        {
+            "name": "CB 120374",
+            "vote": "Approve" 
+        }, 
+        {
+            "name": "CB 120337",
+            "vote": "Reject" 
+        }
+    ],
+    "uid": "3"
+}
   const [images, setImages] = useState([
     { id: '1', image: IMAGES.image5 },
     { id: '2', image: IMAGES.image7 },
@@ -74,7 +95,7 @@ function ClicksignupScreen({ navigation }) {
             ]}
             renderItem={({item}) => <Text >{item.key}</Text>}
           ></FlatList>
-          <TouchableHighlight onPress={() => navigation.navigate('Profile')} underlayColor="white">
+          <TouchableHighlight onPress={() => navigation.navigate('Profile', user)} underlayColor="white">
         <View style={styles.button}>
           <Text style={styles.buttonText}>See Your Stats!</Text>
         </View>

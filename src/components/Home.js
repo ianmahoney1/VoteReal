@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, View, Text, TouchableHighlight, StyleSheet, Image} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BillSummaryStory from '../components/BillSummaryStory';
 
 function HomeScreen({ navigation }) {
   return (
@@ -30,6 +31,11 @@ function HomeScreen({ navigation }) {
           <Text style={styles.buttonText}>Log In</Text>
         </View>
       </TouchableHighlight>
+      <TouchableHighlight onPress={() => navigation.navigate('BillSummaryStory')} underlayColor="white">
+        <View style={styles.secretbutton}>
+          <Text style={padding=100, color='white'}></Text>
+        </View>
+      </TouchableHighlight>
     </View>
   );
 }
@@ -40,6 +46,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     backgroundColor: '#2196F3',
+  },
+  secretbutton: {
+    marginBottom: 30,
+    width: 260,
+    borderRadius: 10,
+    alignItems: 'center',
   },
   buttonText: {
     textAlign: 'center',

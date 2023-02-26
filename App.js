@@ -15,6 +15,11 @@ import ClicksignupScreen from './src/components/CsignUp';
 import ProfileScreen from './src/components/Profile';
 import LoginScreen from './src/components/Login';
 import BillSummaryStory from './src/components/BillSummaryStory';
+import ReportScreen from './src/components/Report';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
+
 
 const Stack = createNativeStackNavigator();
 
@@ -41,12 +46,13 @@ export default class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Homes">
-          <Stack.Screen options={{ title: ' ' }} name="Home" component={HomeScreen} />
+          <Stack.Screen options={{ title: 'Home' }} name="Home" component={HomeScreen} />
           <Stack.Screen options={{ title: 'Sign Up' }} name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen options={{ title: 'Are You Represented?' }}  name="Profile" component={ProfileScreen} />
           <Stack.Screen options={{ title: 'Your Representatives' }} name="CsignUp" component={ClicksignupScreen} />
           <Stack.Screen options={{ title: 'Today\'s Bill' }} name="BillSummaryStory" component={BillSummaryStory} /> 
+          <Stack.Screen options={{ title: 'Bill Report' }} name="Report" component={ReportScreen} /> 
         </Stack.Navigator>
       </NavigationContainer>
     );
