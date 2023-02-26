@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {
   Alert,
   StyleSheet,
@@ -18,6 +18,19 @@ import BillSummaryStory from './src/components/BillSummaryStory';
 
 const Stack = createNativeStackNavigator();
 
+var userContext = React.createContext(null);
+
+//export default function UserContextComponent() {
+//  var[userInfo] = useState({
+//    uID: null
+//  })
+//
+//  return (
+//    <userContext.Provider val={userInfo}>
+//      <
+//    </userContext.Provider>
+//  )
+//}
 
 export default class App extends Component {
   _onPressButton() {

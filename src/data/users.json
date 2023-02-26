@@ -1,10 +1,9 @@
 [
     {
-        "first_name": "Masia",
-        "last_name": "Wisdom",
+        "name": "Masia Wisdom",
         "username": "masia",
         "password": "12345",
-        "council_members": ["Sara Nelson", "Teresa Mosqueda", "Tammy J. Morales"],
+        "council_members": ["Sara Nelson", "Tammy J. Morales", "Teresa Mosqueda"],
         "votes": [
             {
                 "name": "CB 120231",
@@ -18,11 +17,10 @@
         "uid": "1"
     },
     {
-        "first_name": "Vrishab",
-        "last_name": "Kumar",
+        "name": "Vrishab Kumar",
         "username": "vsk",
         "password": "12345",
-        "council_members": ["Sara Nelson", "Teresa Mosqueda", "Kshama Sawant"],
+        "council_members": ["Kshama Sawant", "Sara Nelson", "Teresa Mosqueda"],
         "votes": [
             {
                 "name": "CB 120231",
@@ -40,11 +38,10 @@
         "uid": "2"
     },
     {
-        "first_name": "Aditi",
-        "last_name": "Joshi",
+        "name": "Aditi Joshi",
         "username": "aditi",
         "password": "12345",
-        "council_members": ["Kshama Sawant", "Teresa Mosqueda", "Lisa Herbold"],
+        "council_members": ["Kshama Sawant", "Lisa Herbold", "Teresa Mosqueda"],
         "votes": [
             {
                 "name": "CB 120231",
