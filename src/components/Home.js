@@ -30,11 +30,6 @@ function HomeScreen({ navigation }) {
           <Text style={styles.buttonText}>Log In</Text>
         </View>
       </TouchableHighlight>
-      <TouchableHighlight onPress={() => navigation.navigate('BillSummaryStory')} underlayColor="white">
-        <View style={styles.button}>
-          <Text style={styles.buttonText}>TEST</Text>
-        </View>
-      </TouchableHighlight>
     </View>
   );
 }
