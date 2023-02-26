@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "CB 120231", 
         "summary": "AN ORDINANCE relating to City employment; authorizing the execution of an agreement between The City of Seattle and Seattle Fire Chiefs Association, International Association of Fire Fighters (IAFF) Local 2898; and ratifying and confirming certain prior acts.",
         "link": "", 
@@ -45,6 +46,7 @@
         "keywords": ["Fire Fighters"]
     },
     {
+        "id": 2, 
         "name": "CB 120374", 
         "summary": "AN ORDINANCE relating to human rights; including protections against discrimination based on an individual’s actual, potential, perceived, or alleged pregnancy outcomes; and amending Sections 3.14.910, 3.14.931, 3.110.260, 4.80.020, 6.02.270, 6.202.230, 14.04.020, 14.04.030, 14.04.040, 14.06.020, 14.06.030, 14.08.015, 14.08.020, 14.08.045, 14.08.070, 14.08.190, 14.10.010, 14.10.020, and 18.12.280 of the Seattle Municipal Code.",
         "link": "", 
@@ -78,6 +80,7 @@
         "keywords": ["Discrimination, Human Rights, Pregnancy, Pregnancy Outcomes"]
     },
     {
+        "id": 3,
         "name": "CB 120337", 
         "summary": "AN ORDINANCE relating to civilian and community oversight of the police; establishing a process for investigating complaints naming the Chief of Police; adding a new subchapter V to Chapter 3.29 of the Seattle Municipal Code; and amending Section 49 of Ordinance 125315 to renumber the existing Subchapter V of Chapter 3.29 and Sections 3.29.500 and 3.29.510 of the Seattle Municipal Code.",
         "link": "", 

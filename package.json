@@ -15,7 +15,9 @@
     "expo-status-bar": "~1.4.4",
     "native-notify": "^3.0.4",
     "react": "18.2.0",
+    "react-insta-stories": "^2.4.2",
     "react-native": "0.71.3",
+    "react-native-insta-story": "^1.1.8",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0"
   },
