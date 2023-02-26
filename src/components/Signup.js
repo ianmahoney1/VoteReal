@@ -5,9 +5,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState } from "react";
 import { Permissions } from 'expo';
 import registerNNPushToken from 'native-notify';
+import UserService from '../services/UserService';
 
 function SignupScreen({ navigation, user }) {
-  console.log(user);
   registerNNPushToken(6506, 'qUhButoBbZV2fnpqcWzVXaqM')
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -54,7 +54,7 @@ function SignupScreen({ navigation, user }) {
         <Text></Text>
         <Text></Text>
         <TouchableHighlight style={styles.button} onPress={() => 
-          {if (name == "") {Alert.alert("All fields must not be blank") } else if (address == "") {Alert.alert("All fields must not be blank")} else if (username == "") {Alert.alert("All fields must not be blank")} else if (password == "") {Alert.alert("All fields must not be blank")} else { navigation.navigate('CsignUp')}}}>
+          {if (name == "") {Alert.alert("All fields must not be blank") } else if (address == "") {Alert.alert("All fields must not be blank")} else if (username == "") {Alert.alert("All fields must not be blank")} else if (password == "") {Alert.alert("All fields must not be blank")} else { navigation.navigate('CsignUp', user)}}}>
                     <Text style={styles.buttonText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
       </View>

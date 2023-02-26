@@ -46,7 +46,7 @@ function BillSummaryStory({ navigation }) {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', height: 5}}>
 
         <TouchableHighlight activeOpacity={0.6}
-            onPress={() => sethasViewedSummary("True")} underlayColor="white">
+            onPress={() => setHasViewedSummary("True")} underlayColor="white">
             <InstaStory data={data}
                 duration={10}
                 onStart={item => console.log(item)}
