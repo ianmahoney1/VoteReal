@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, StyleSheet, TouchableHighlight, Text, TextInput } from 'react-native';
+import { Button, View, StyleSheet, TouchableHighlight, Text, TextInput, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState } from "react";
@@ -53,7 +53,8 @@ function SignupScreen({ navigation, user }) {
         <Text></Text>
         <Text></Text>
         <Text></Text>
-        <TouchableHighlight style={styles.button} onPress={() => navigation.navigate(' ')}>
+        <TouchableHighlight style={styles.button} onPress={() => 
+          {if (name == "") {Alert.alert("All fields must not be blank") } else if (address == "") {Alert.alert("All fields must not be blank")} else if (username == "") {Alert.alert("All fields must not be blank")} else if (password == "") {Alert.alert("All fields must not be blank")} else { navigation.navigate(' ')}}}>
                     <Text style={styles.buttonText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
       </View>
