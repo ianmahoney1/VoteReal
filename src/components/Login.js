@@ -6,7 +6,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import UserService from '../services/UserService';
 
 function LoginScreen({ navigation }) {
-
     const [user, setUser] = useState('');
     const [pass, setPass] = useState('');
     return (

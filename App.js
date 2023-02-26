@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {
   Alert,
   StyleSheet,
@@ -18,6 +18,19 @@ import LoginScreen from './src/components/Login';
 
 const Stack = createNativeStackNavigator();
 
+var userContext = React.createContext(null);
+
+//export default function UserContextComponent() {
+//  var[userInfo] = useState({
+//    uID: null
+//  })
+//
+//  return (
+//    <userContext.Provider val={userInfo}>
+//      <
+//    </userContext.Provider>
+//  )
+//}
 
 export default class App extends Component {
   _onPressButton() {
@@ -27,12 +40,13 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
+
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Profile" component={ProfileScreen} />
-          <Stack.Screen name="CsignUp" component={ClicksignupScreen} />
+          <Stack.Screen name=" " component={ClicksignupScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
