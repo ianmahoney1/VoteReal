@@ -3,8 +3,8 @@ import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function ProfileScreen({ navigation }) {
-    
-  }
+function ProfileScreen({ route, navigation }) {
+  const userObj = route.params;
+}
 
-  export default ProfileScreen; 
+export default ProfileScreen; 

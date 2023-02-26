@@ -3,19 +3,7 @@ import {useState} from 'react';
 import { Button, View, Text, StyleSheet, TextInput, Image, TouchableHighlight, Alert} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-const userData = require('../data/users.json');
-
-const UserService = {
-    getUser: function(username, password) {
-        for(let user of userData) {
-            if (user.username == username && user.password == password) {
-                return true
-                
-            }
-        }
-        return false; 
-    }
-};
+import UserService from '../services/UserService';
 
 function LoginScreen({ navigation }) {
 
@@ -47,7 +35,13 @@ function LoginScreen({ navigation }) {
             <Text></Text>
             <Text></Text>
             <Text></Text>
-            <TouchableHighlight onPress={() => {if (UserService.getUser(user,pass) == true) { navigation.navigate('Profile') } else {Alert.alert("Invalid username and/or password")}}} underlayColor="white">
+            <TouchableHighlight onPress={() => {
+                let userObj = UserService.getUser(user, pass)
+                if (userObj != null) { 
+                    navigation.navigate('Profile', userObj) 
+                } else {
+                    Alert.alert("Invalid username and/or password")
+                }}} underlayColor="white">
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>Log In</Text>
                 </View>
