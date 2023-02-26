@@ -60,8 +60,10 @@ const BillService = {
         }
         summary = []
         for (let cm of Object.keys(match)) {
-            match_percent = (match[cm].agree / match[cm].total) * 100; 
+            match_percent = (match[cm].agree / match[cm].total); 
             summary.push({
+                agree: match[cm].agree,
+                disagree: match[cm].total - match[cm].agree,
                 council_member: cm,
                 match_percent: match_percent
             })
