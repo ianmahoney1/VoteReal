@@ -1,42 +1,76 @@
 import * as React from 'react';
-import { Button, View, Text, ImageBackground } from 'react-native';
+import { Button, View, Text, Image, SafeAreaView, ScrollView,StatusBar, StyleSheet, TouchableHighlight} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 function ClicksignupScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'top' }}>
-      {/* Add the image background */}
-      <ImageBackground
-        source={require('C:/Users/pskii/Desktop/Hackathon/VoteReal/src/components/CouncilPics/AlexPedersen.jpeg')}
-        style={{
-          borderWidth: 3,
-          borderColor: 'black',
-          margin: 40,
-          height: '40%',
-          width: '80%',
-          resizeMode: 'stretch', // or 'contain' or 'cover' depending on your needs
-        }}
-      >
-        {/* Add the text above the image */}
-        <View style={{ marginTop: 40, marginRight: 180 }}>
-          <Text>First Description</Text>
-          <Text style={{ marginTop: 10 }}>Second Description</Text>
-          <Text style={{ marginTop: 10 }}>Third Description</Text>
+    <SafeAreaView style = {styles.container}>
+      <ScrollView style = {styles.scrollView}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'top' }}>
+        <Image source={require('./CouncilPics/KshamaSawant.jpeg')} style={{width: 400, height: 400}}/>
+        <View style={{ marginTop: 20, marginBottom: 20 }}>
+          <Text style={styles.Text}>Name: Kshama Sawant</Text>
+          <Text style={styles.Text}>Party: Socialist Alternative</Text>
+          <Text style={styles.Text}>District: 3</Text>
+          <Text></Text>
+          <Text></Text>
         </View>
-      </ImageBackground>
-      
-      {/* Add the "Profile Page" button */}
-      <View style={{ marginTop: 120, marginRight: 230 }}>
-        <Button
-          title="Profile Page"
-          onPress={() => navigation.navigate('Home')}
-        />
-      </View>
+        <Image source={require('./CouncilPics/TeresaMosqueda.jpeg')} style={{width: 400, height: 400}}/>
+        <View style={{ marginTop: 20, marginBottom: 20 }}>
+        <Text style={styles.Text}>Name: Teresa Mosqueda</Text>
+          <Text style={styles.Text}>Party: Democrat</Text>
+          <Text style={styles.Text}>District: At-large</Text>
+          <Text></Text>
+          <Text></Text>
+        </View>
+        <Image source={require('./CouncilPics/SaraNelson.jpeg')} style={{width: 400, height: 400}}/>
+        <View style={{ marginTop: 20, marginBottom: 20 }}>
+        <Text style={styles.Text}>Name: Sara Nelson</Text>
+          <Text style={styles.Text}>Party: Democrat</Text>
+          <Text style={styles.Text}>District: At-large</Text>
+          <Text></Text>
+          <Text></Text>
+        </View>
+        <TouchableHighlight onPress={() => navigation.navigate('Profile')} underlayColor="white">
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>See Your Stats!</Text>
+        </View>
+      </TouchableHighlight>
     </View>
+      </ScrollView>
+    </SafeAreaView>
+    
   );
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    marginHorizontal: 20,
+  },
+  Text: {
+    fontSize: 20,
+  },
+  button: {
+    marginBottom: 30,
+    width: 260,
+    borderRadius: 10,
+    alignItems: 'center',
+    backgroundColor: '#2196F3',
+  },
+  buttonText: {
+    textAlign: 'center',
+    padding: 20,
+    color: 'black',
+  },
+});
+
 
 export default ClicksignupScreen;
 
