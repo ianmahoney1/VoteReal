@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useRef } from 'react';
-import { Button, View, Text, Dimensions, Image, FlatList } from 'react-native';
+import { Button, View, Text, Dimensions, Image, FlatList, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
