@@ -3,7 +3,7 @@ import { Button, View, StyleSheet, TouchableHighlight, Text, TextInput } from 'r
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState } from "react";
-import HomeScreen from './Home';
+import { Permissions } from 'expo';
 
 function SignupScreen({ navigation }) {
   const [name, setName] = useState("");
@@ -46,8 +46,8 @@ function SignupScreen({ navigation }) {
                     onChangeText={(text) => setPassword(text)}
                     onSubmitEditing={() => console.log(`Your Address is ${password}`)}
                 />
-        <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('Login')}>
-                    <Text style={styles.loginText}>Login</Text>
+        <TouchableHighlight style={styles.buttonText} onPress={() => navigation.navigate('CsignUp')}>
+                    <Text style={styles.loginText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
       </View>
 
@@ -78,7 +78,7 @@ function SignupScreen({ navigation }) {
     buttonText: {
       textAlign: 'center',
       padding: 20,
-      color: 'black',
+      color: 'while',
     },
   });
 
