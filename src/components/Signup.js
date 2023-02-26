@@ -54,7 +54,7 @@ function SignupScreen({ navigation, user }) {
         <Text></Text>
         <Text></Text>
         <TouchableHighlight style={styles.button} onPress={() => 
-          {if (name == "") {Alert.alert("All fields must not be blank") } else if (address == "") {Alert.alert("All fields must not be blank")} else if (username == "") {Alert.alert("All fields must not be blank")} else if (password == "") {Alert.alert("All fields must not be blank")} else { navigation.navigate(' ')}}}>
+          {if (name == "") {Alert.alert("All fields must not be blank") } else if (address == "") {Alert.alert("All fields must not be blank")} else if (username == "") {Alert.alert("All fields must not be blank")} else if (password == "") {Alert.alert("All fields must not be blank")} else { navigation.navigate('CsignUp')}}}>
                     <Text style={styles.buttonText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
       </View>
