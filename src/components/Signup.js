@@ -53,7 +53,7 @@ function SignupScreen({ navigation, user }) {
         <Text></Text>
         <Text></Text>
         <Text></Text>
-        <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('CsignUp')}>
+        <TouchableHighlight style={styles.button} onPress={() => navigation.navigate(' ')}>
                     <Text style={styles.buttonText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
       </View>
