@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "CB 120231", 
         "summary": ["The City of Seattle is authorizing an agreement with the Seattle Fire Chiefs Association to provide additional support to City employees who are essential in delivering critical services during the COVID-19 pandemic.",
                     "This agreement acknowledges the challenges faced by City employees, such as limited access to childcare and public transit, and aims to retain them by bolstering their morale and recognizing their extraordinary efforts.",
@@ -49,6 +50,7 @@
         "bid": 1
     },
     {
+        "id": 2, 
         "name": "CB 120374", 
         "summary": ["This ordinance adds protections against discrimination based on an individual's actual, potential, perceived, or alleged pregnancy outcomes in Seattle Municipal Code.",
                     "The ordinance responds to the U.S. Supreme Court's decision in Dobbs v. Jackson Women's Health Organization, which overruled the constitutional right to an abortion established by Roe v. Wade and Planned Parenthood of Southeastern Pa. v. Casey.",
@@ -86,6 +88,7 @@
         "bid": 2
     },
     {
+        "id": 3,
         "name": "CB 120337", 
         "summary": ["The new ordinance establishes a process for investigating complaints naming the Chief of Police in Seattle.",
                     "The Office of Inspector General (OIG) will review misconduct complaints handled by the Office of Police Accountability (OPA) and audit areas involving conflicts of interest, fraud, waste, and abuse to maintain public trust in the criminal justice system.",

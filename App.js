@@ -14,7 +14,7 @@ import SignupScreen from './src/components/Signup';
 import ClicksignupScreen from './src/components/CsignUp';
 import ProfileScreen from './src/components/Profile';
 import LoginScreen from './src/components/Login';
-
+import BillSummaryStory from './src/components/BillSummaryStory';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,13 +40,13 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Navigator initialRouteName="Homes">
+          <Stack.Screen options={{ title: ' ' }} name="Home" component={HomeScreen} />
+          <Stack.Screen options={{ title: 'Sign Up' }} name="Signup" component={SignupScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
-          <Stack.Screen name=" " component={ClicksignupScreen} />
+          <Stack.Screen options={{ title: 'Are You Represented?' }}  name="Profile" component={ProfileScreen} />
+          <Stack.Screen options={{ title: 'Your Representatives' }} name="CsignUp" component={ClicksignupScreen} />
+          <Stack.Screen options={{ title: 'Today\'s Bill' }} name="BillSummaryStory" component={BillSummaryStory} /> 
         </Stack.Navigator>
       </NavigationContainer>
     );
