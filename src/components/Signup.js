@@ -47,6 +47,9 @@ function SignupScreen({ navigation }) {
                     onSubmitEditing={() => console.log(`Your Address is ${password}`)}
                 />
         <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
         <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('CsignUp')}>
                     <Text style={styles.buttonText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
@@ -72,6 +75,7 @@ function SignupScreen({ navigation }) {
     button: {
       marginBottom: 30,
       width: 260,
+      borderRadius: 10,
       alignItems: 'center',
       backgroundColor: '#2196F3',
     },
