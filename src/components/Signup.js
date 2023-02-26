@@ -4,8 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useState } from "react";
 import { Permissions } from 'expo';
+import registerNNPushToken from 'native-notify';
 
 function SignupScreen({ navigation }) {
+  registerNNPushToken(6506, 'qUhButoBbZV2fnpqcWzVXaqM')
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [username, setUsername] = useState("");
