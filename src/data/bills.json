@@ -45,7 +45,8 @@
             }
         ],
         "decision": "Approve",
-        "keywords": ["Fire Fighters"]
+        "keywords": ["Fire Fighters"],
+        "bid": 1
     },
     {
         "name": "CB 120374", 
@@ -81,7 +82,8 @@
             }
         ],
         "decision": "Approve",
-        "keywords": ["Discrimination, Human Rights, Pregnancy, Pregnancy Outcomes"]
+        "keywords": ["Discrimination, Human Rights, Pregnancy, Pregnancy Outcomes"],
+        "bid": 2
     },
     {
         "name": "CB 120337", 
@@ -129,6 +131,7 @@
             }
         ],
         "decision": "Approve",
-        "keywords": ["Police, Police Oversight, Complaints"]
+        "keywords": ["Police, Police Oversight, Complaints"],
+        "bid": 3
     }
 ]
