@@ -1,12 +1,12 @@
 const userData = require('../data/users.json');
 
 const UserService = {
-    getUser: function(first_name, last_name, password) {
+    getUser: function(username, password) {
         for(let user of userData) {
-            if (user.first_name == first_name && user.last_name == last_name && user.password == password) {
+            if (user.username == username && user.password == password) {
                 return {
-                    first_name: user.first_name,
-                    last_name: user.last_name,
+                    name: user.name,
+                    username: user.username,
                     council_members: user.council_members,
                     votes: user.votes,
                     uid: user.uid

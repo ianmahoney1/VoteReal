@@ -1,7 +1,6 @@
 [
     {
-        "first_name": "Masia",
-        "last_name": "Wisdom",
+        "name": "Masia Wisdom",
         "username": "masia",
         "password": "12345",
         "council_members": ["Sara Nelson", "Teresa Mosqueda", "Tammy J. Morales"],
@@ -18,8 +17,7 @@
         "uid": "1"
     },
     {
-        "first_name": "Vrishab",
-        "last_name": "Kumar",
+        "name": "Vrishab Kumar",
         "username": "vsk",
         "password": "12345",
         "council_members": ["Sara Nelson", "Teresa Mosqueda", "Kshama Sawant"],
@@ -40,8 +38,7 @@
         "uid": "2"
     },
     {
-        "first_name": "Aditi",
-        "last_name": "Joshi",
+        "name": "Aditi Joshi",
         "username": "aditi",
         "password": "12345",
         "council_members": ["Kshama Sawant", "Teresa Mosqueda", "Lisa Herbold"],
