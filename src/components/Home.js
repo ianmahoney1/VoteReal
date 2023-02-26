@@ -1,12 +1,23 @@
 import * as React from 'react';
-import { Button, View, Text, TouchableHighlight, StyleSheet } from 'react-native';
+import { Button, View, Text, TouchableHighlight, StyleSheet, Image} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style= {{lineHeight: 20, fontSize: 20}}>Home Screen</Text>
+      <Image source={require('./logo.png')} style={{width: 400, height: 200}} />
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
       <Text></Text>
       <TouchableHighlight onPress={() => navigation.navigate('Signup')} underlayColor="white">
         <View style={styles.button}>
