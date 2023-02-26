@@ -1,61 +1,102 @@
 import * as React from 'react';
-import { Button, View, Text, Image, SafeAreaView, ScrollView,StatusBar, StyleSheet, TouchableHighlight} from 'react-native';
+import { useState, useRef } from 'react';
+import { Button, View, Text, Dimensions, Image, FlatList, StyleSheet, TouchableHighlight} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Carousel, { Pagination } from 'react-native-snap-carousel';
+import * as Progress from 'react-native-progress';
 
+const IMAGES = {
+  image1: require('../components/CouncilPics/AlexPedersen.jpeg'),
+  image2: require('../components/CouncilPics/AndrewLewis.jpeg'),
+  image3: require('../components/CouncilPics/DanStrauss.jpeg'),
+  image4: require('../components/CouncilPics/DeboraJuarez.jpeg'),
+  image5: require('../components/CouncilPics/KshamaSawant.jpeg'),
+  image6: require('../components/CouncilPics/LisaHerbold.jpeg'),
+  image7: require('../components/CouncilPics/SaraNelson.jpeg'),
+  image8: require('../components/CouncilPics/TammyMorales.jpeg'),
+  image9: require('../components/CouncilPics/TeresaMosqueda.jpeg')
+};
+
+import BillService from '../services/BillService'; 
+
+const { width } = Dimensions.get('window');
+const SPACING = 10;
+const THUMB_SIZE = 80;
 
 function ClicksignupScreen({ navigation }) {
+  const [images, setImages] = useState([
+    { id: '1', image: IMAGES.image5 },
+    { id: '2', image: IMAGES.image7 },
+    { id: '3', image: IMAGES.image9 },
+  ]);
+  
+  const hardcodedpeople = 
+  [
+    {
+      "name": "Kshama Sawant",
+      "party": "Socialist Alternative",
+      "district": "3"
+    },
+    {
+      "name": "Sara Nelson",
+      "party": "Democrat",
+      "district": "At-large"
+    },
+    {
+      "name": "Teresa Mosqueda",
+      "party": "Democrat",
+      "district": "At-large"
+    }
+  ]
+
   return (
-    <SafeAreaView style = {styles.container}>
-      <ScrollView style = {styles.scrollView}>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'top' }}>
-        <Image source={require('./CouncilPics/KshamaSawant.jpeg')} style={{width: 400, height: 400}}/>
-        <View style={{ marginTop: 20, marginBottom: 20 }}>
-          <Text style={styles.Text}>Name: Kshama Sawant</Text>
-          <Text style={styles.Text}>Party: Socialist Alternative</Text>
-          <Text style={styles.Text}>District: 3</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+       <Carousel
+        layout='default'
+        data={images}
+        sliderWidth={width}
+        itemWidth={width}
+        renderItem={({ item, index }) => (
+          <View key={index} style={{alignItems: 'center'}}>
+            <Text style={styles.Text} >Swipe to See All of your Council Members!</Text>
+          <Image
+            style={{ width: '100%', height: '65%' }}
+            resizeMode='contain'
+            source={item.image}
+          />
           <Text></Text>
-          <Text></Text>
-        </View>
-        <Image source={require('./CouncilPics/TeresaMosqueda.jpeg')} style={{width: 400, height: 400}}/>
-        <View style={{ marginTop: 20, marginBottom: 20 }}>
-        <Text style={styles.Text}>Name: Teresa Mosqueda</Text>
-          <Text style={styles.Text}>Party: Democrat</Text>
-          <Text style={styles.Text}>District: At-large</Text>
-          <Text></Text>
-          <Text></Text>
-        </View>
-        <Image source={require('./CouncilPics/SaraNelson.jpeg')} style={{width: 400, height: 400}}/>
-        <View style={{ marginTop: 20, marginBottom: 20 }}>
-        <Text style={styles.Text}>Name: Sara Nelson</Text>
-          <Text style={styles.Text}>Party: Democrat</Text>
-          <Text style={styles.Text}>District: At-large</Text>
-          <Text></Text>
-          <Text></Text>
-        </View>
-        <TouchableHighlight onPress={() => navigation.navigate('Profile')} underlayColor="white">
+          <FlatList
+            data={[
+              {key: "Name: " + hardcodedpeople[index].name},
+              {key: "Party: " + hardcodedpeople[index].party},
+              {key: "District: " + hardcodedpeople[index].district},
+            ]}
+            renderItem={({item}) => <Text >{item.key}</Text>}
+          ></FlatList>
+          <TouchableHighlight onPress={() => navigation.navigate('Profile')} underlayColor="white">
         <View style={styles.button}>
           <Text style={styles.buttonText}>See Your Stats!</Text>
         </View>
       </TouchableHighlight>
+        </View>
+        )}
+      />
     </View>
-      </ScrollView>
-    </SafeAreaView>
-    
-  );
+  )
 }
 
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: StatusBar.currentHeight,
+  title: {
+    fontSize: 32,
   },
-  scrollView: {
-    marginHorizontal: 20,
+  Text:{
+    marginTop:30,
+    fontSize:20
   },
-  Text: {
+  FlatList: {
     fontSize: 20,
+
   },
   button: {
     marginBottom: 30,
