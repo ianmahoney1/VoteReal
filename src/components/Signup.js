@@ -46,8 +46,9 @@ function SignupScreen({ navigation }) {
                     onChangeText={(text) => setPassword(text)}
                     onSubmitEditing={() => console.log(`Your Address is ${password}`)}
                 />
-        <TouchableHighlight style={styles.buttonText} onPress={() => navigation.navigate('CsignUp')}>
-                    <Text style={styles.loginText}>See Your Local Rep Profile!</Text>
+        <Text></Text>
+        <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('CsignUp')}>
+                    <Text style={styles.buttonText}>See Your Local Rep Profile!</Text>
                 </TouchableHighlight>
       </View>
 
@@ -58,27 +59,26 @@ function SignupScreen({ navigation }) {
     input: {
       height: 40,
       margin: 12,
+      width: "90%",
       borderWidth: 1,
+      borderRadius: 10,
       padding: 10,
     },
     container: {
         flex: 1,
-        backgroundColor: "#455a64",
         alignItems: "center",
         justifyContent: "center",
     },
     button: {
-      margin: 50,
       marginBottom: 30,
       width: 260,
-      height: 50,
       alignItems: 'center',
-      backgroundColor: 'white',
+      backgroundColor: '#2196F3',
     },
     buttonText: {
       textAlign: 'center',
       padding: 20,
-      color: 'while',
+      color: 'black',
     },
   });
 
